@@ -44,7 +44,7 @@ class TestGame(unittest.TestCase):
         self.assertEqual("______Y", game.display)
 
     def test_not_won(self):
-        self.assertEqual(False, game.won)
+        self.assertEqual(False, game.won())
 
     def test_try_letter_all(self):
 
@@ -52,24 +52,24 @@ class TestGame(unittest.TestCase):
             result = game.try_letter(letter)
             self.assertEqual(True, result)
 
-        self.assertEqual(True, game.won)
+        self.assertEqual(True, game.won())
         self.assertEqual("PRIMARY", game.display)
 
     def test_try_word_wrong(self):
         result = game.try_word("secondary")
         self.assertEqual(False, result)
-        self.assertEqual(False, game.won)
+        self.assertEqual(False, game.won())
         self.assertEqual("_______", game.display)
 
     
     def test_try_word_correct(self):
         result = game.try_word("primary")
         self.assertEqual(True, result)
-        self.assertEqual(True, game.won)
+        self.assertEqual(True, game.won())
         self.assertEqual("PRIMARY", game.display)
 
     def test_try_word_correct_upper(self):
         result = game.try_word("PRIMARY")
         self.assertEqual(True, result)
-        self.assertEqual(True, game.won)
+        self.assertEqual(True, game.won())
         self.assertEqual("PRIMARY", game.display)
