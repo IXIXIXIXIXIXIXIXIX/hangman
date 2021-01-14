@@ -40,6 +40,7 @@ class TestPlayer(unittest.TestCase):
 
     def test_status_display(self):
         # Status 0
+        print("\n")
         self.player.display_status()
         self.player.guess_letter(self.game, 'q')
 

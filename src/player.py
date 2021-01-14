@@ -26,4 +26,20 @@ class Player:
 
     def display_status(self):
         # TODO: make this print an ASCII representation of the state
+
+        if self.state == 0:
+            pass
+        elif self.state == 1:
+            pass
+
+        else:
+            print("\n")
+            print("____")
+            print("|   |")
+            print("|   O")
+            print("|  /|\\ ")
+            print("|   |")
+            print("|  / \\")
+            print("| /   \\")
+            print("|_________")
         print(f"Status is currently {self.state}")
