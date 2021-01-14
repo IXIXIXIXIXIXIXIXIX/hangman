@@ -28,18 +28,80 @@ class Player:
         # TODO: make this print an ASCII representation of the state
 
         if self.state == 0:
-            pass
+            print("\n")
+            print("______")
+            print("|    |")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("|__________")
+
         elif self.state == 1:
-            pass
+            print("\n")
+            print("______")
+            print("|    |")
+            print("|    O")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("|__________")
+
+        elif self.state == 2:
+            print("\n")
+            print("______")
+            print("|    |")
+            print("|    O")
+            print("|    | ")
+            print("|    | ")
+            print("|")
+            print("|")
+            print("|__________")
+
+        elif self.state == 3:
+            print("\n")
+            print("______")
+            print("|    |")
+            print("|    O")
+            print("|   /|")
+            print("|  | |")
+            print("|")
+            print("|")
+            print("|__________")
+
+        elif self.state == 4:
+            print("\n")
+            print("______")
+            print("|    |")
+            print("|    O")
+            print("|   /|\\ ")
+            print("|  | | |")
+            print("|")
+            print("|")
+            print("|__________")
+
+        elif self.state == 5:
+            print("\n")
+            print("______")
+            print("|    |")
+            print("|    O")
+            print("|   /|\\ ")
+            print("|  | | |")
+            print("|   / ")
+            print("|  /   ")
+            print("|__________")
 
         else:
             print("\n")
-            print("____")
-            print("|   |")
-            print("|   O")
-            print("|  /|\\ ")
-            print("|   |")
-            print("|  / \\")
-            print("| /   \\")
-            print("|_________")
+            print("______")
+            print("|    |")
+            print("|    O")
+            print("|   /|\\ ")
+            print("|  | | |")
+            print("|   / \\")
+            print("|  /   \\")
+            print("|__________")
+
         print(f"Status is currently {self.state}")
