@@ -1,17 +1,10 @@
-def fizz_buzz(input_number):
+class Game:
 
-    try:
-        char_convert = int(input_number)
-    except:
-        return "not a number" 
+    def __init__(self, solution):
 
-    if (input_number % 5 == 0) and (input_number % 3 == 0):
-        return "FizzBuzz"
+        self.solution = solution.upper();
 
-    elif input_number % 5 == 0:
-        return "Buzz"
+        self.display = ""
 
-    elif input_number % 3 == 0:
-        return "Fizz"
-
-    return str(input_number)
+        for letter in self.solution:
+            self.display += '_'
