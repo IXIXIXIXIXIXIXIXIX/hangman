@@ -24,6 +24,9 @@ class Player:
         else:
             return False
 
+    def reset(self):
+        self.state = 0
+
     def display_status(self):
         # TODO: make this print an ASCII representation of the state
 
@@ -104,4 +107,4 @@ class Player:
             print("|  /   \\")
             print("|__________")
 
-        print(f"Status is currently {self.state}")
+        print("\n")

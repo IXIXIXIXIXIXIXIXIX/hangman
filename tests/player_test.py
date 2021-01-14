@@ -38,6 +38,16 @@ class TestPlayer(unittest.TestCase):
         
         self.assertEqual(True, self.player.is_dead())
 
+    def test_reset(self):
+
+        for i in range(7):
+            self.player.guess_letter(self.game, 'q')
+        
+        self.assertEqual(True, self.player.is_dead())
+
+        self.player.reset()
+        self.assertEqual(False, self.player.is_dead())
+
     def test_status_display(self):
         # Status 0
         print("\n")
