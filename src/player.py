@@ -6,10 +6,16 @@ class Player:
         self.state = 0
 
     def guess_letter(self, game, letter):
-        pass
+
+        if not self.is_dead():
+            if not game.try_letter(letter):
+                self.state += 1
 
     def guess_word(self, game, word):
-        pass
+
+        if not self.is_dead():
+            if not game.try_word(word):
+                self.state += 1
 
     def is_dead(self):
         
@@ -18,6 +24,6 @@ class Player:
         else:
             return False
 
-    def display_status():
+    def display_status(self):
         # TODO: make this print an ASCII representation of the state
         print(f"Status is currently {self.state}")

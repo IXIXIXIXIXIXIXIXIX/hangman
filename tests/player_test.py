@@ -37,3 +37,33 @@ class TestPlayer(unittest.TestCase):
             self.player.guess_letter(self.game, 'q')
         
         self.assertEqual(True, self.player.is_dead())
+
+    def test_status_display(self):
+        # Status 0
+        self.player.display_status()
+        self.player.guess_letter(self.game, 'q')
+
+        # Status 1
+        self.player.display_status()
+        self.player.guess_letter(self.game, 'q')
+        
+        # Status 2
+        self.player.display_status()
+        self.player.guess_letter(self.game, 'q')
+
+        # Status 3
+        self.player.display_status()
+        self.player.guess_letter(self.game, 'q')
+
+        # Status 4
+        self.player.display_status()
+        self.player.guess_letter(self.game, 'q')
+
+        # Status 5
+        self.player.display_status()
+        self.player.guess_letter(self.game, 'q')
+
+        # Status 6
+        self.player.display_status()
+
+        self.assertEqual(True, True)
