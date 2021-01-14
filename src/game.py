@@ -5,6 +5,8 @@ class Game:
         self.solution = solution.upper();
 
         self.display = ""
+        self.tried_letters = []
+        self.tried_words = []
 
         for letter in self.solution:
             self.display += '_'
@@ -15,6 +17,10 @@ class Game:
     def try_letter(self, letter):
 
         letter_upper = letter.upper()
+        if not letter_upper in self.tried_letters:
+            self.tried_letters.append(letter_upper)
+            self.tried_letters = sorted(self.tried_letters)
+
         index = 0
         new_display = list(self.display)
         success = False
@@ -31,7 +37,13 @@ class Game:
 
     def try_word(self, word):
 
-        if word.upper() == self.solution:
+        word_upper = word.upper()
+
+        if not word_upper in self.tried_words:
+            self.tried_words.append(word_upper)
+            self.tried_words = sorted(self.tried_words)
+
+        if word_upper == self.solution:
             self.display = self.solution
             return True
 
@@ -47,4 +59,7 @@ class Game:
         self.display = ""
 
         for letter in self.solution:
-            self.display += '_' 
+            self.display += '_'
+
+        self.tried_letters =[]
+        self.tried_words = []

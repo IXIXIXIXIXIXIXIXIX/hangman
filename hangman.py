@@ -18,7 +18,12 @@ def main():
             # Next line found at https://stackoverflow.com/questions/2084508/clear-terminal-in-python
             os.system('cls' if os.name == 'nt' else 'clear')
             
-            print("HANGMAN")
+            print("HANGMAN\n")
+
+            print("Tried words:")
+            print(", ".join(game.tried_words))
+            print("Tried Letters:")
+            print(", ".join(game.tried_letters))
             player.display_status()
             print(f"{game.display}\n")
             
@@ -31,13 +36,21 @@ def main():
         
         if player.is_dead():
             os.system('cls' if os.name == 'nt' else 'clear')
-            print("HANGMAN")
+            print("HANGMAN\n")
+            print("Tried words:")
+            print(", ".join(game.tried_words))
+            print("Tried Letters:")
+            print(", ".join(game.tried_letters))
             player.display_status()
             print("Game Over!")
             print(f"The word you were looking for was: {game.solution}")
         else:
             os.system('cls' if os.name == 'nt' else 'clear')
-            print("HANGMAN")
+            print("HANGMAN\n")
+            print("Tried words:")
+            print(", ".join(game.tried_words))
+            print("Tried Letters:")
+            print(", ".join(game.tried_letters))
             player.display_status()
             print(f"{game.display}\n")
             print("Congratulations! You Won!\n")

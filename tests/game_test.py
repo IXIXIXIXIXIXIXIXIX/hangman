@@ -141,3 +141,40 @@ class TestGame(unittest.TestCase):
         self.assertEqual(True, self.game2.won())
         self.assertEqual("PRIMARY", self.game2.display)
 
+    def test_tried_letters_empty(self):
+        self.assertEqual(0, len(self.game.tried_letters))
+
+    def test_tried_letters_populated(self):
+
+        self.game.try_letter('q')
+        self.game.try_letter('a')
+        
+        self.assertEqual(2, len(self.game.tried_letters))
+        self.assertEqual('A', self.game.tried_letters[0])
+        self.assertEqual('Q', self.game.tried_letters[1])
+
+    def test_tried_letters_twice(self):
+
+        self.game.try_letter('q')
+        self.game.try_letter('q')
+        
+        self.assertEqual(1, len(self.game.tried_letters))
+
+    def test_tried_words_empty(self):
+        self.assertEqual(0, len(self.game.tried_letters))
+
+    def test_tried_words_populated(self):
+
+        self.game.try_word("xylophone")
+        self.game.try_word("apple")
+        
+        self.assertEqual(2, len(self.game.tried_words))
+        self.assertEqual("APPLE", self.game.tried_words[0])
+        self.assertEqual("XYLOPHONE", self.game.tried_words[1])
+
+    def test_tried_words_twice(self):
+
+        self.game.try_word("xylophone")
+        self.game.try_word("xylophone")
+        
+        self.assertEqual(1, len(self.game.tried_words))
