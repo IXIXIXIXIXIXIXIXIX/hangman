@@ -62,7 +62,6 @@ class TestGame(unittest.TestCase):
         self.assertEqual(False, self.game.won())
         self.assertEqual("_______", self.game.display)
 
-    
     def test_try_word_correct(self):
         result = self.game.try_word("primary")
         self.assertEqual(True, result)
@@ -74,7 +73,6 @@ class TestGame(unittest.TestCase):
         self.assertEqual(True, result)
         self.assertEqual(True, self.game.won())
         self.assertEqual("PRIMARY", self.game.display)
-
 
     def test_solution_length_upper_solution(self):
         self.assertEqual(7, self.game2.length())
