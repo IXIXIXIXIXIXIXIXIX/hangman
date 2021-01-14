@@ -39,3 +39,12 @@ class Game:
 
     def won(self):
        return not '_' in self.display 
+
+    def reset(self, new_word):
+
+        self.solution = new_word.upper();
+
+        self.display = ""
+
+        for letter in self.solution:
+            self.display += '_' 

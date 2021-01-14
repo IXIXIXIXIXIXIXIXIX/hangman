@@ -1,11 +1,12 @@
 import os
 from src.game import Game
 from src.player import Player
+from src.word_chooser import *
 from src.input import *
 
 def main():
 
-    game_word = "tertiary"
+    game_word = word_chooser() 
     game = Game(game_word)
     player = Player()
     option = 'y'
@@ -43,6 +44,7 @@ def main():
     
         option = get_option()
         player.reset()
+        game.reset(word_chooser())
 
 
 if __name__ == "__main__":
