@@ -9,7 +9,10 @@ class Game:
         self.tried_words = []
 
         for letter in self.solution:
-            self.display += '_'
+            if letter ==' ':
+                self.display += ' '
+            else:
+                self.display += '_'
 
     def length(self):
         return len(self.solution)

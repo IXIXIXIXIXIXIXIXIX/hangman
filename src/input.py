@@ -11,7 +11,8 @@ def get_guess():
 
     player_input = input("Type a single letter to guess at a letter or type more than one letter to guess at the whole word: ")
 
-    while not player_input.isalpha():
+    while not all(letter.isalpha() or letter.isspace() for letter in player_input):
+
         player_input = input("Please type only letters: ")
 
     return player_input
