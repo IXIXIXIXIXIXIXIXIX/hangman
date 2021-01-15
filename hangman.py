@@ -3,6 +3,7 @@ from src.game import Game
 from src.player import Player
 from src.word_chooser import *
 from src.input import *
+from src.logo import *
 
 def main():
 
@@ -18,7 +19,7 @@ def main():
             # Next line found at https://stackoverflow.com/questions/2084508/clear-terminal-in-python
             os.system('cls' if os.name == 'nt' else 'clear')
             
-            print("HANGMAN\n")
+            print_logo()
 
             print("Tried words:")
             print(", ".join(game.tried_words))
@@ -36,7 +37,7 @@ def main():
         
         if player.is_dead():
             os.system('cls' if os.name == 'nt' else 'clear')
-            print("HANGMAN\n")
+            print_logo()
             print("Tried words:")
             print(", ".join(game.tried_words))
             print("Tried Letters:")
@@ -46,7 +47,7 @@ def main():
             print(f"The word you were looking for was: {game.solution}")
         else:
             os.system('cls' if os.name == 'nt' else 'clear')
-            print("HANGMAN\n")
+            print_logo()
             print("Tried words:")
             print(", ".join(game.tried_words))
             print("Tried Letters:")
