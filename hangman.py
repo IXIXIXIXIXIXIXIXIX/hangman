@@ -28,7 +28,7 @@ def main():
             player.display_status()
             print(f"{game.display}\n")
             
-            guess = get_guess()
+            guess = get_guess().strip()
             if len(guess) == 1:
                 player.guess_letter(game, guess)
             else:
