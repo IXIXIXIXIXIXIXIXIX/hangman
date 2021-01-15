@@ -19,7 +19,7 @@ class Player:
 
     def is_dead(self):
         
-        if self.state >= 6:
+        if self.state >= 10:
             return True
         else:
             return False
@@ -28,42 +28,85 @@ class Player:
         self.state = 0
 
     def display_status(self):
-        # TODO: make this print an ASCII representation of the state
 
         if self.state == 0:
             print("\n")
-            print("______")
-            print("|    |")
-            print("|")
-            print("|")
-            print("|")
-            print("|")
-            print("|")
-            print("|__________")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
 
         elif self.state == 1:
             print("\n")
-            print("______")
-            print("|    |")
-            print("|    O")
-            print("|")
-            print("|")
-            print("|")
-            print("|")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
+            print("")
             print("|__________")
 
         elif self.state == 2:
             print("\n")
-            print("______")
-            print("|    |")
-            print("|    O")
-            print("|    | ")
-            print("|    | ")
+            print("")
+            print("|    ")
+            print("|")
+            print("|")
+            print("|")
             print("|")
             print("|")
             print("|__________")
 
         elif self.state == 3:
+            print("\n")
+            print("______")
+            print("|    ")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("|__________")
+
+        elif self.state == 4:
+            print("\n")
+            print("______")
+            print("|    |")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("|__________")
+
+        elif self.state == 5:
+            print("\n")
+            print("______")
+            print("|    |")
+            print("|    O")
+            print("|")
+            print("|")
+            print("|")
+            print("|")
+            print("|__________")
+
+        elif self.state == 6:
+            print("\n")
+            print("______")
+            print("|    |")
+            print("|    O")
+            print("|    | ")
+            print("|    | ")
+            print("|")
+            print("|")
+            print("|__________")
+
+        elif self.state == 7:
             print("\n")
             print("______")
             print("|    |")
@@ -74,7 +117,7 @@ class Player:
             print("|")
             print("|__________")
 
-        elif self.state == 4:
+        elif self.state == 8:
             print("\n")
             print("______")
             print("|    |")
@@ -85,7 +128,7 @@ class Player:
             print("|")
             print("|__________")
 
-        elif self.state == 5:
+        elif self.state == 9:
             print("\n")
             print("______")
             print("|    |")

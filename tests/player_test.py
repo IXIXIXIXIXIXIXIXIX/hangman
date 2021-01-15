@@ -33,14 +33,14 @@ class TestPlayer(unittest.TestCase):
 
     def test_is_dead_when_dead(self):
 
-        for i in range(7):
+        for i in range(11):
             self.player.guess_letter(self.game, 'q')
         
         self.assertEqual(True, self.player.is_dead())
 
     def test_reset(self):
 
-        for i in range(7):
+        for i in range(11):
             self.player.guess_letter(self.game, 'q')
         
         self.assertEqual(True, self.player.is_dead())
@@ -75,6 +75,22 @@ class TestPlayer(unittest.TestCase):
         self.player.guess_letter(self.game, 'q')
 
         # Status 6
+        self.player.display_status()
+        self.player.guess_letter(self.game, 'q')
+
+        # Status 7
+        self.player.display_status()
+        self.player.guess_letter(self.game, 'q')
+
+        # Status 8
+        self.player.display_status()
+        self.player.guess_letter(self.game, 'q')
+
+        # Status 9
+        self.player.display_status()
+        self.player.guess_letter(self.game, 'q')
+        
+        # Status 10
         self.player.display_status()
 
         self.assertEqual(True, True)
